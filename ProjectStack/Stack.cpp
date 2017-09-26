@@ -26,13 +26,12 @@ void Stack::push(int value)
 		Node * newNode = new Node();
 		head->value = value;
 		newNode->prev = head;
-		head->next = newNode;
 		head = newNode;
 		top++;
 	}
 	else
 	{
-		throw new _exception;
+		throw new out_of_range("kek");
 	}
 }
 
@@ -43,7 +42,9 @@ int Stack::fetch()
 		return -1;
 	}
 	else
+	{
 		return head->value;
+	}	
 }
 
 int Stack::pop()
@@ -54,13 +55,13 @@ int Stack::pop()
 	}
 	else
 	{
-		Node *pr = new Node();
-		pr = head;
-		head = (*head).prev;
-		int value_prev = (*pr).value;
-		free(pr);
+		Node *last = new Node();
+		last = head;
+		head = head->prev;
+		int valueLast = last->value;
+		free(last);
 		top--;
-		return (value_prev);
+		return valueLast;
 	}
 }
 
@@ -68,12 +69,12 @@ void Stack::show()
 {
 	if (head != NULL)
 	{
-		Node *pr = new Node();
-		pr = head;
-		while (pr != NULL)
+		Node *temp = new Node();
+		temp = head;
+		while (temp->prev != NULL)
 		{
-			cout << pr->value << " ";
-			pr = pr->prev;
+			cout << temp->value << " ";
+			temp = temp->prev;
 		}
 
 		cout << "\n";
