@@ -5,7 +5,7 @@ using namespace std;
 Stack::Stack(int size)
 {
 	head = NULL;
-	top = 0;
+	size = 0;
 	capacity = size;
 }
 
@@ -21,14 +21,14 @@ void Stack::push(int value)
 		head = new Node();
 	}
 
-	if (top < capacity)
+	if (size < capacity)
 	{
 		Node * newNode = new Node();
 		head->value = value;
 		newNode->prev = head;
 		head->next = newNode;
 		head = newNode;
-		top++;
+		size++;
 	}
 	else
 	{
@@ -59,7 +59,7 @@ int Stack::pop()
 		head = (*head).prev;
 		int value_prev = (*pr).value;
 		free(pr);
-		top--;
+		size--;
 		return (value_prev);
 	}
 }
@@ -80,7 +80,7 @@ void Stack::show()
 	}
 }
 
-int Stack::size()
+int Stack::getSize()
 {
-	return top + 1;
+	return size + 1;
 }
