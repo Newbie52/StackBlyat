@@ -7,7 +7,7 @@
 */
 struct Node
 {
-	Node *next, *prev;
+	Node * prev;
 	int value;
 };
 
