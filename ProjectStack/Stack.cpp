@@ -24,7 +24,7 @@ void Stack::push(int value)
 	if (size < capacity)
 	{
 		Node * newNode = new Node();
-		head->value = value;
+		newNode->value = value;
 		newNode->prev = head;
 		head = newNode;
 		size++;

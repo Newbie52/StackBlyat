@@ -1,3 +1,8 @@
-﻿  Stack.cpp
-  ProjectStack.vcxproj -> C:\Users\Prok\Desktop\C++\StackBlyat\Debug\ProjectStack.exe
-  ProjectStack.vcxproj -> C:\Users\Prok\Desktop\C++\StackBlyat\Debug\ProjectStack.pdb (Partial PDB)
+﻿  stdafx.cpp
+  Stack.cpp
+  ProjectStack.cpp
+c:\users\user\documents\github\stackblyat\projectstack\projectstack.cpp(21): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\conio.h(452): note:  см. объявление "getch"
+  Создание кода...
+  ProjectStack.vcxproj -> C:\Users\User\Documents\GitHub\StackBlyat\Debug\ProjectStack.exe
+  ProjectStack.vcxproj -> C:\Users\User\Documents\GitHub\StackBlyat\Debug\ProjectStack.pdb (Partial PDB)
