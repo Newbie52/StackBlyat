@@ -2,11 +2,11 @@
 #include <iostream>
 using namespace std;
 
-Stack::Stack(int size)
+Stack::Stack(int _size)
 {
 	head = NULL;
 	size = 0;
-	capacity = size;
+	capacity = _size;
 }
 
 
@@ -60,7 +60,7 @@ int Stack::pop()
 		head = head->prev;
 		int valueLast = last->value;
 		free(last);
-		top--;
+		size--;
 		return valueLast;
 	}
 }
