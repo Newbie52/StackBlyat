@@ -1,5 +1,10 @@
 #pragma once
 
+/**
+* \brief Структура - звено.
+* 
+* хранит указатели на прошлый элемент, следующий и значение текущего.
+*/
 struct Node
 {
 	Node * prev;
@@ -47,13 +52,13 @@ public:
 	*   Вернёт размер стека.
 	*   @result размер стека.
 	*/
-	int size();
+	int getSize();
 
 	void show();
 
 private:
 	Node *head;
-	int top;
+	int size;
 	int capacity;
 };
 
