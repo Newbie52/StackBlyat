@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-Stack::Stack(int size)
+Stack::Stack(int _size)
 {
 	head = NULL;
 	this->size = 0;
