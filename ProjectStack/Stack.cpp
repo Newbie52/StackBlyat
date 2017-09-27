@@ -83,5 +83,5 @@ void Stack::show()
 
 int Stack::getSize()
 {
-	return size + 1;
+	return size;
 }

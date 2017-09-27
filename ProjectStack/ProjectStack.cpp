@@ -12,11 +12,24 @@ int main()
 	st->push(1);
 	st->push(2);
 	st->push(3);
+	st->push(1);
+	st->push(2);
+	st->push(3);
+	st->push(1);
+	st->push(2);
+	st->push(3);
+	st->push(1);
+	st->push(2);
+	st->push(3);
+	st->push(1);
+	st->push(2);
+	st->push(3);
 	cout << "Added 3 el-s: 1,2,3"<< endl;
 	st->show();
 	cout << "Deleted:"<<st->pop() << endl;
 	st->show();
 	cout << "Last:" << st->fetch() << endl;
+	cout << "Size:" << st->getSize() << endl;
 	
 	getch();
     return 0;
